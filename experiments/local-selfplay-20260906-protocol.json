@@ -1,0 +1,46 @@
+{
+  "seed": 175985001720591491,
+  "comparison_games_per_mode": 2500,
+  "modes": [
+    "expert",
+    "evil"
+  ],
+  "first_click_zero": true,
+  "use_flags": false,
+  "training": "data/selfplay-v44-batch1/counterfactual-train.jsonl",
+  "validation": "data/selfplay-v44-batch1/counterfactual-validation.jsonl",
+  "checkpoint": "models/replay-agent-local-selfplay-candidate.pt",
+  "training_settings": {
+    "epochs": 40,
+    "patience": 8,
+    "batch_size": 64,
+    "learning_rate": 0.0001,
+    "ranking_weight": 1.0,
+    "bce_weight": 1.0,
+    "min_outcome_gap": 0.0,
+    "augment_train": true
+  },
+  "acceptance": "Combined paired gain with exact McNemar p < 0.05; no mode loses more than 0.5 percentage points; no retuning on paired test.",
+  "reference_sha256": "f8f827afa6c3a67d0b5909978b2f285d8430babdcc1f8e274f2b8ae391851fd4",
+  "qa": {
+    "episodes": 2000,
+    "outcomes": {
+      "won": 870,
+      "lost": 1130
+    },
+    "counterfactual": {
+      "train": {
+        "states": 158,
+        "informative": 28
+      },
+      "validation": {
+        "states": 36,
+        "informative": 6
+      }
+    },
+    "train_validation_overlap": 0,
+    "all_episodes_reconstructed": true,
+    "all_chosen_branch_outcomes_match": true
+  },
+  "candidate_sha256": "5515d8eec43ad7c2450e26d4d0eda0af140b7b4186f624d82eeda685232be12d"
+}

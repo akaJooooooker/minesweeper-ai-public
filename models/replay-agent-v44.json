@@ -1,0 +1,47 @@
+{
+  "kind": "replay-agent-deployment-v20",
+  "checkpoint": "replay-agent-v40-calibrated-abstention.pt",
+  "mode": "standard",
+  "solver_cells": 24,
+  "fallback_solver_cells": 40,
+  "proof_solver_cells": 64,
+  "neural_blend": 0.65,
+  "neural_blend_mode": "probability",
+  "policy_blend": 0.6,
+  "policy_top_k": 3,
+  "policy_min_advantage": 0.075,
+  "policy_min_board_cells": 480,
+  "status": "selected",
+  "agent_strategy": {
+    "first_click_standard": "free_safe_only",
+    "first_click_no_guess": "replay_prescribed_zero",
+    "chord": "proven_flags_max_coverage",
+    "solver_escalation": "standard_24_to_40__no_guess_40_to_64"
+  },
+  "selection": {
+    "standard_paired_seed": 2026090401,
+    "standard_games_per_mode": 1000,
+    "reference": "replay-agent-v32.json",
+    "reference_wins": {
+      "beginner": 852,
+      "intermediate": 690,
+      "expert": 312
+    },
+    "candidate_wins": {
+      "beginner": 854,
+      "intermediate": 699,
+      "expert": 327
+    },
+    "mcnemar_exact_p": {
+      "beginner": 0.5,
+      "intermediate": 0.049041748046875,
+      "expert": 0.010673840530216694
+    },
+    "real_no_guess_replays": 1696,
+    "real_no_guess_wins": 1696,
+    "real_no_guess_guesses": 0,
+    "evil_three_bv_per_second": 768.17,
+    "evil_ioe": 0.8365023896397554,
+    "tests_passed": 85
+  }
+}

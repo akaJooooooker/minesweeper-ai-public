@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "torch": "2.12.1+cpu",
+  "ai_won": true,
+  "actions": 21,
+  "manual_flags": true,
+  "replay_analysis": true,
+  "saved_feedback": true,
+  "returned_to_original_game": true,
+  "per_user_storage": true,
+  "version": "0.1.0",
+  "platform": "Windows x64",
+  "scope": "Actual packaged binary; one deterministic game, not an efficacy benchmark",
+  "source_revision": "private research 9a0420e plus packaging paths",
+  "large_experiments_rerun": false
+}

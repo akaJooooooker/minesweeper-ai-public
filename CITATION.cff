@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "Please cite the manuscript and identify the release or commit."
+title: "Minesweeper AI: Exact Inference, Selective Learning and Replay Analysis"
+authors:
+  - name: "akaJooooooker"
+version: "0.1.0"
+date-released: 2026-09-11
+repository-code: "https://github.com/akaJooooooker/minesweeper-ai-public"
+license: MIT

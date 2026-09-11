@@ -1,0 +1,73 @@
+{
+  "standard": {
+    "beginner": {
+      "v44_wilson_95": [
+        0.8170559130927837,
+        0.8496634993233392
+      ],
+      "mcnemar_exact_p": 1.0
+    },
+    "intermediate": {
+      "v44_wilson_95": [
+        0.6734476531944407,
+        0.7138085324604331
+      ],
+      "mcnemar_exact_p": 0.0015137195587158203
+    },
+    "expert": {
+      "v44_wilson_95": [
+        0.3244814498600604,
+        0.3661128347971279
+      ],
+      "mcnemar_exact_p": 0.00021680385841747665
+    }
+  },
+  "candidate": {
+    "selected": "V44",
+    "candidate_promoted": false,
+    "reason": "No statistically supported paired win improvement",
+    "games": 5000,
+    "reference_wins": 2189,
+    "candidate_wins": 2191,
+    "reference_only": 6,
+    "candidate_only": 8,
+    "mcnemar_exact_p": 0.79052734375,
+    "delta_percentage_points": 0.04,
+    "per_mode": {
+      "expert": {
+        "games": 2500,
+        "reference_wins": 1253,
+        "reference_seconds": 922.6138217000298,
+        "reference_guesses": 6696,
+        "candidate_wins": 1253,
+        "candidate_seconds": 921.0580372998484,
+        "candidate_guesses": 6737,
+        "candidate_only": 3,
+        "reference_only": 3,
+        "mcnemar_exact_p": 1.0,
+        "delta_pp": 0.0
+      },
+      "evil": {
+        "games": 2500,
+        "reference_wins": 936,
+        "reference_seconds": 1510.7826235999419,
+        "reference_guesses": 8905,
+        "candidate_wins": 938,
+        "candidate_seconds": 1511.9122806000742,
+        "candidate_guesses": 8915,
+        "candidate_only": 5,
+        "reference_only": 3,
+        "mcnemar_exact_p": 0.7265625,
+        "delta_pp": 0.08
+      }
+    },
+    "unique_pairs": 5000,
+    "train_test_seed_overlap": 0,
+    "all_registered_boards_completed": true,
+    "default_workers": 4,
+    "original_checkpoint_unchanged": true,
+    "candidate_checkpoint_unchanged_during_test": true
+  },
+  "verified_pairs": 5000,
+  "word_count": 4887
+}

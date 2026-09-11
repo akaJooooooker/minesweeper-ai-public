@@ -1,0 +1,109 @@
+{
+  "kind": "replay-agent-risk-interpolation-v32",
+  "feature_channels": 18,
+  "action_order": [
+    "reveal",
+    "flag",
+    "chord"
+  ],
+  "model_width": 64,
+  "history": [
+    {
+      "total": 2.4382796710028227,
+      "policy": 2.0514158690664996,
+      "risk": 0.38475962000129316,
+      "value": 0.6482799391838809,
+      "epoch": 1.0
+    },
+    {
+      "total": 1.2171613760010793,
+      "policy": 0.8484395490280543,
+      "risk": 0.35129533379837097,
+      "value": 0.6435805062644412,
+      "epoch": 2.0
+    },
+    {
+      "total": 0.8548417898400136,
+      "policy": 0.4886488661915246,
+      "risk": 0.34780295480296713,
+      "value": 0.640971461318223,
+      "epoch": 3.0
+    },
+    {
+      "total": 0.695382802724848,
+      "policy": 0.3321728708120568,
+      "risk": 0.34605364231738095,
+      "value": 0.6339436781399617,
+      "epoch": 4.0
+    },
+    {
+      "total": 0.6070340987006814,
+      "policy": 0.24662770778183105,
+      "risk": 0.3450706072463768,
+      "value": 0.6262369307205341,
+      "epoch": 5.0
+    },
+    {
+      "total": 0.5547984676475427,
+      "policy": 0.20069524222418256,
+      "risk": 0.34403191507197395,
+      "value": 0.6069575302917811,
+      "epoch": 6.0
+    },
+    {
+      "total": 0.5297690206225284,
+      "policy": 0.17407695816643037,
+      "risk": 0.34363902038166394,
+      "value": 0.6129084852086879,
+      "epoch": 7.0
+    },
+    {
+      "total": 0.4945472048665679,
+      "policy": 0.14143015029848124,
+      "risk": 0.34316451824206573,
+      "value": 0.6051159618278567,
+      "epoch": 8.0
+    },
+    {
+      "total": 0.4769227988988275,
+      "policy": 0.12520434061127267,
+      "risk": 0.342764870270831,
+      "value": 0.6011200525239088,
+      "epoch": 9.0
+    },
+    {
+      "total": 0.4517546399860406,
+      "policy": 0.09904033170336753,
+      "risk": 0.3424620165108739,
+      "value": 0.6049443088122407,
+      "epoch": 10.0
+    }
+  ],
+  "training": {
+    "datasets": [
+      "data\\replay-agent-v1.jsonl",
+      "data\\replay-agent-v2.jsonl",
+      "data\\replay-hard-audited-v4.jsonl"
+    ],
+    "examples": 61485,
+    "epochs": 10,
+    "batch_size": 32,
+    "learning_rate": 0.001,
+    "seed": 20260910,
+    "device": "cuda",
+    "amp": true,
+    "gpu_memory_fraction": 0.25,
+    "batch_delay_ms": 10
+  },
+  "risk_interpolation": {
+    "reference": "models\\replay-agent-v4.pt",
+    "tuned": "models\\replay-agent-v31-human-risk-large.pt",
+    "weight": 0.5,
+    "parameters": [
+      "risk_head.0.weight",
+      "risk_head.0.bias",
+      "risk_head.2.weight",
+      "risk_head.2.bias"
+    ]
+  }
+}
